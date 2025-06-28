@@ -1,8 +1,8 @@
 const quoteContainer = document.getElementById('quote-container');
-const quotetext = document.getElementById('quote');
-const authortext = document.getElementById('author');
+const quoteText = document.getElementById('quote');
+const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
-const newQuoteBtn = document.getElementById('quote-container');
+const newQuoteBtn = document.getElementById('new-quote');
 
 let apiQuotes = [];
 
@@ -11,7 +11,8 @@ let apiQuotes = [];
 function newQuote() {
     //Pick a random quote for apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    console.log(quote);
+    authorText.textContent= quote.author ; /* object.objectproperty */
+    quoteText.textContent = quote.text;
 }
 
 // Get Quotes API
