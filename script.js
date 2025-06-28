@@ -4,6 +4,8 @@ const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 
+newQuoteBtn.addEventListener('click', newQuote);
+
 let apiQuotes = [];
 
 // Show New Quote
